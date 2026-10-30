@@ -36,4 +36,4 @@ entities:
   class_alias: IFI
   entity_id: dea:entity-integration-interface
   layer: L5
-  
+
