@@ -33,7 +33,7 @@ links:
 
 entities:
   - building_block: L5-integration
-    class_alias: IFI
+    class_alias: IF
     entity_id: dea:entity-integration-interface
     layer: L5
 
