@@ -1,25 +1,39 @@
 # Metamodel Pointer — API
-# Auto-generated from OpenDEAM v0.2.1 (dea-architecture-framework, ADR-0002).
-# Do not edit manually — allocation changes go through the root model
-# (structural: ADR + minor bump; additive: PR + patch bump).
-metamodel:
-  version: v0.2.1
-  entity_id: dea:entity-api
-  class_alias: API
-  layer: L5
-  building_block: L5-integration
-  viewer_url: "https://technehub-labs.github.io/metamodel/?entity=API"
-
-catalog:
-  name: API
-  repo: technehub-labs/dea-catalog-api-contracts
-  status: planned
-
+#
+# Two consumers, two blocks (see FOUNDATIONS §5):
+#   - the top-level identity keys are consumed by the vendored
+#     regenerate_catalog.py to build CATALOG.yaml's catalog block;
+#   - the `metamodel:` allocation block is validated by
+#     dea-architecture-framework validate-against-model.yml
+#     against the pinned root-model ref (v0.8.0), and asserted
+#     locally by scripts/check_pointer.py.
+#
+# Allocation changes go through the root model, not this file.
+id: dea:catalog-api-contracts
+name: API
+abbreviation: API
+version: 0.1.0
+status: active
+metamodel_version: 1.0.0
+owner: TechNeHub Labs
 description: |
-  A contract defining the request/response shape of a service interface.
-
+  A contract defining the request/response shape of a service interface. Per CR-021 (D-4 disposition 2026-10-16): audit-then-specifies posture. The existing relationship vocabulary was audited in CR-021 §3.1; no existing relationship has the exact semantic "API contract specifies an interaction boundary". The canonical entry therefore sources the new dea:specifies relationship with target dea:IntegrationInterface. dea:API remains a contract entity; the interaction boundary it specifies is a separate Digital Profile entity (dea:IntegrationInterface). EGV-004 identity continuity: existing dea:entity-api references continue to resolve after regeneration. Cited template precedent: CR-019 (the abstract kind flip on dea:SolutionComponent; mirrored here for the API / interface separation).
+metamodel:
+  building_block: L5-integration
+  class_alias: API
+  entity_id: dea:entity-api
+  layer: L5
+  version: v0.8.0
+  viewer_url: https://technehub-labs.github.io/metamodel/?entity=API
 links:
   metamodel_repo: https://github.com/technehub-labs/dea-metamodel
   root_model: https://github.com/technehub-labs/dea-architecture-framework
-  viewer: "https://technehub-labs.github.io/metamodel/?entity=API"
+  viewer: https://technehub-labs.github.io/metamodel/?entity=API
   github: https://github.com/technehub-labs/dea-catalog-api-contracts
+
+entities:
+  - building_block: L5-integration
+    class_alias: IF
+    entity_id: dea:entity-integration-interface
+    layer: L5
+

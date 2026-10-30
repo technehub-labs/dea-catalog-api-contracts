@@ -1,0 +1,27 @@
+catalog:
+  abbreviation: API
+  counts:
+    candidates: 0
+    canonical: 0
+    entities: 0
+    open_change_requests: 0
+    research_files: 0
+    retired: 0
+  cross_cutting:
+    change_requests: change-requests/
+    classifications: classifications/
+    contributions_queue: contributions/
+    schemas: schemas/
+    validators: scripts/
+  description: 'A contract defining the request/response shape of a service interface. Per CR-021 (D-4 disposition 2026-10-16): audit-then-specifies posture. The existing relationship vocabulary was audited in CR-021 §3.1; no existing relationship has the exact semantic "API contract specifies an interaction boundary". The canonical entry therefore sources the new dea:specifies relationship with target dea:IntegrationInterface. dea:API remains a contract entity; the interaction boundary it specifies is a separate Digital Profile entity (dea:IntegrationInterface). EGV-004 identity continuity: existing dea:entity-api references continue to resolve after regeneration. Cited template precedent: CR-019 (the abstract kind flip on dea:SolutionComponent; mirrored here for the API / interface separation).
+
+    '
+  entities: []
+  id: dea:catalog-api-contracts
+  metamodel_version: 1.0.0
+  name: API
+  owner: TechNeHub Labs
+  repository: https://github.com/technehub-labs/dea-catalog-api-contracts.git
+  research_registers: []
+  status: active
+  version: 0.1.0
