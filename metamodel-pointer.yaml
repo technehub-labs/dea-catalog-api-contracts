@@ -32,8 +32,8 @@ links:
   github: https://github.com/technehub-labs/dea-catalog-api-contracts
 
 entities:
-  building_block: L5-integration
-  class_alias: IFI
-  entity_id: dea:entity-integration-interface
-  layer: L5
+  - building_block: L5-integration
+    class_alias: IFI
+    entity_id: dea:entity-integration-interface
+    layer: L5
 
