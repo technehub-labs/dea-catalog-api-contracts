@@ -1,0 +1,63 @@
+id: 'dea:api-enterprise-resource-planning-erp-system-supply-chain-management-inventory-replenishment-planning'
+type: API
+name: 'Inventory Replenishment Planning API Contract'
+description: "Vendor-neutral API contract record specifying the request and response shape of the Inventory Replenishment Planning Interface interaction boundary of the Enterprise Resource Planning Erp System generic system class (enterprise applications sector). The contract fixes the file transfer message shapes and constraints for internal application consumers under the batch interaction pattern; the boundary itself is owned by the Integration Interface catalogue record pinned for this population, which this contract specifies per the CR-021 D-4 disposition. The substitutability test passes: materially different vendor implementations can expose the same contract shape. At least 3 distinct vendor systems corroborate the shape as evidence only; no vendor product is canonical (per G-12)."
+version: 1.0.0
+lifecycle_status: active
+tags:
+- 'interface-kind:file-transfer'
+- 'interaction-pattern:batch'
+- 'consumer-class:internal-application'
+- 'sector:enterprise-applications'
+- 'system-class:enterprise-resource-planning-erp-system'
+evidence:
+  sources:
+  - kind: repository-path
+    reference: 'technehub-labs/dea-catalog-integration-interfaces@35afd57443e4aab376dfc456cdef93fb39e7a22d:entities/v1-alpha/interfaces/enterprise-resource-planning-erp-system/enterprise-resource-planning-erp-system-supply-chain-management-inventory-replenishment-planning/interface.yaml'
+  rationale: "The pinned Integration Interface record at commit 35afd57443e4aab376dfc456cdef93fb39e7a22d is the canonical boundary evidence: its generic system class binding and its 3 distinct vendor corroborations ground this contract shape (evidence only; no vendor product is canonical per G-12)."
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-11-12'
+    actor: 'Emmanuel A. Otchere'
+  - stage: corroborated
+    date: '2026-11-12'
+    actor: 'Emmanuel A. Otchere'
+  - stage: reviewed
+    date: '2026-11-12'
+    actor: 'Emmanuel A. Otchere'
+  - stage: canonical
+    date: '2026-11-12'
+    actor: 'Emmanuel A. Otchere'
+governance:
+  functional_owner: 'Emmanuel A. Otchere'
+  steward: 'Emmanuel A. Otchere'
+  approval_status: approved
+  review_date: '2027-11-12'
+  source_and_evidence: 'Metamodel clause (OpenDEAM v0.8.0 dea:entity-api, L5-integration, contract entity per CR-021 D-4). Admitting CR CR-API-CAT-02 (population, deterministic per G-10). Boundary evidence vendored from CR-IS-CAT-04B at pin 35afd57443e4aab376dfc456cdef93fb39e7a22d.'
+relationships:
+  - id: 'dea:relationship-enterprise-resource-planning-erp-system-supply-chain-management-inventory-replenishment-planning-specifies'
+    source_id: 'dea:api-enterprise-resource-planning-erp-system-supply-chain-management-inventory-replenishment-planning'
+    target_id: 'dea:integration-interface-enterprise-resource-planning-erp-system-supply-chain-management-inventory-replenishment-planning'
+    relationship_type: specifies
+    direction: source-to-target
+    status: active
+    effective_from: '2026-11-12'
+    rationale: 'This contract specifies the request and response shape of the Inventory Replenishment Planning Interface boundary; the boundary is owned by the Integration Interface catalogue record per the CR-021 D-4 disposition.'
+    provenance:
+      type: manual
+      asserted_by: 'Emmanuel A. Otchere'
+      asserted_at: '2026-11-12'
+      verification_status: verified
+external_references:
+- system: 'Oracle Fusion Cloud Applications (Financials, HCM, SCM)'
+  identifier: 'OFU-SCM-002'
+- system: 'SAP S/4HANA'
+  identifier: 'S4-SCM-002'
+- system: 'Microsoft Dynamics 365 (Finance & Operations, Customer Engagement)'
+  identifier: 'D3-SCM-002'
+metadata:
+  created_at: '2026-11-12'
+  updated_at: '2026-11-12'
+  created_by: 'Emmanuel A. Otchere'
+  status: active
